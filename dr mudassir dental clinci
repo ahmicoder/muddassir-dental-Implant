@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dental Clinic</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f8fafc;
+}
+
+header {
+  background: linear-gradient(135deg, #0ea5e9, #2563eb);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 32px;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #22c55e;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.container {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.price {
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.form {
+  max-width: 500px;
+  margin: auto;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+footer {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Dr Mudddassir Dental Clinic & Implant CEnter</h1>
+  <p>Modern Care for Your Perfect Smile</p>
+  <a href="#appointment" class="btn">Book Appointment</a>
+</header>
+
+<div class="container">
+  <h2 class="section-title">Our Services</h2>
+  <div class="grid">
+    <div class="card">
+   <!-- Teeth Whitening -->
+    <div class="card">
+      <h3>Teeth Whitening</h3>
+      <p>Brighten your smile instantly</p>
+      <p class="price">Rs 35,000 <span style="color:#22c55e; font-weight:bold;">(10% Off!)</span></p>
+      <p style="color:#22c55e; font-weight:bold;">✅ 100% Guaranteed: Bright smile results or money back</p>
+    </div>
+
+    <!-- Scaling -->
+    <div class="card">
+      <h3>Scaling</h3>
+      <p>Deep cleaning for healthy teeth</p>
+      <p class="price">Rs 7,000 <span style="color:#22c55e; font-weight:bold;">(20% Off!)</span></p>
+      <p style="color:#22c55e; font-weight:bold;">✅ 100% Guaranteed: Healthy teeth after cleaning</p>
+    </div>
+
+    <!-- Braces -->
+    <div class="card">
+      <h3>Braces</h3>
+      <p>Perfect alignment for your teeth</p>
+      <p class="price" style="color:#2563eb; font-weight:bold;">Starting from Rs 100,000 – Up to Rs 300,000</p>
+      <small style="color:#555;">*Final price depends on number of teeth & complexity*</small>
+      <p style="color:#22c55e; font-weight:bold;">✅ 100% Guaranteed: If teeth not aligned, full refund</p>
+    </div>
+
+  <!-- Crowns -->
+<div class="card">
+  <h3>Crowns</h3>
+  <p>Click below to see prices:</p>
+  <div style="display:flex; gap:10px; flex-wrap:wrap;">
+    <button onclick="showPrice('PFM')">PFM Crown</button>
+    <button onclick="showPrice('Zirconia')">Zirconia Crown</button>
+    <span id="crownPrice" style="margin-left:10px; color:#22c55e; font-weight:bold;"></span>
+  </div>
+  <p style="color:#22c55e; font-weight:bold; margin-top:10px;">✅ 100% Guaranteed: Free repair if crown gets damaged</p>
+</div>
+
+<script>
+function showPrice(type) {
+  const crownPrice = document.getElementById('crownPrice');
+  if(type === 'PFM') {
+    crownPrice.textContent = 'Rs 8,000';
+  } else if(type === 'Zirconia') {
+    crownPrice.textContent = 'Rs 20,000';
+  }
+}
+</script>
+
+    <!-- Implant -->
+    <div class="card">
+      <h3>Implant</h3>
+      <p>Restore missing teeth </p>
+      <p class="price">Starting from Rs 150,000 – Up to Rs 250,000</p>
+      <p style="color:#22c55e; font-weight:bold;">✅ 100% Guaranteed: Successful implant or free redo</p>
+    </div>
+
+    <!-- Root Canal -->
+    <div class="card">
+      <h3>Root Canal (RCT)</h3>
+      <p>Save your natural teeth</p>
+      <p class="price">Starting from Rs 25,000 – Up to Rs 40,000</p>
+      <p style="color:#22c55e; font-weight:bold;">✅ 100% Guaranteed: If RCT fails, repeat procedure free</p>
+    </div>
+
+
+
+<div class="container" id="appointment">
+  <h2 class="section-title">Book Appointment</h2>
+  <div class="form">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="text" id="phone" placeholder="Phone Number" required>
+    <input type="date" id="date" required>
+    <button onclick="book()">Confirm Booking</button>
+    <p id="formMessage" style="color:#22c55e; font-weight:bold; margin-top:10px;"></p>
+  </div>
+</div>
+
+<script>
+function book() {
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const date = document.getElementById('date').value;
+  const message = document.getElementById('formMessage');
+
+  if(name && phone && date) {
+    // Show confirmation to user
+    message.textContent = "✅ Thank you! We will contact you shortly.";
+
+    // Log details to console (for testing)
+    console.log("Appointment Submitted:", {name, phone, date});
+
+    // Clear form
+    document.getElementById('name').value = "";
+    document.getElementById('phone').value = "";
+    document.getElementById('date').value = "";
+
+  } else {
+    message.textContent = "⚠️ Please fill all fields.";
+  }
+}
+</script>
+
+<div class="container">
+  <h2 class="section-title">Contact Us</h2>
+  <p style="text-align:center;">
+    Phone: 
+    <a href="https://wa.me/923312963791" target="_blank">
+      +92 331 2963791
+    </a>
+  </p>
+  <p style="text-align:center;">Location: 1st Floor, above Life Pharmacy, Shahbaz Town</p>
+</div>
+<section style="padding:40px 20px;">
+  <h2 style="text-align:center; margin-bottom:20px;">Our Location</h2>
+
+  <!-- Clickable Address -->
+  <p style="text-align:center; margin-bottom:15px;">
+    <a href="https://www.google.com/maps/search/?api=1&query=Dr+Mudassir+Dental+Clinic+1st+Floor+Above+Life+Pharmacy+Shahbaz+Town" 
+       target="_blank" 
+       style="color:#2563eb; text-decoration:none; font-weight:bold;">
+      📍 Dr Mudassir Dental Clinic, 1st Floor, Above Life Pharmacy, Shahbaz Town (Click to Open in Google Maps)
+    </a>
+  </p>
+
+  <!-- Embedded Map -->
+  <div style="width:100%; height:300px;">
+    <iframe 
+      src="https://www.google.com/maps?q=Dr+Mudassir+Dental+Clinic+1st+Floor+Above+Life+Pharmacy+Shahbaz+Town&output=embed" 
+      width="100%" 
+      height="100%" 
+      style="border:0; border-radius:10px;" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+<footer>
+  <p>© 2026 Dental Clinic. All Rights Reserved.</p>
+</footer>
+
+
+<script>
+function showPrice(type) {
+  const crownPrice = document.getElementById('crownPrice');
+  if(type === 'PFM') {
+    crownPrice.textContent = 'Rs 8,000';
+  } else if(type === 'Zirconia') {
+    crownPrice.textContent = 'Rs 20,000';
+  }
+}
+
+function book() {
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const date = document.getElementById('date').value;
+  const message = document.getElementById('formMessage');
+
+  if(name && phone && date) {
+    message.textContent = "✅ Thank you! We will contact you shortly.";
+    console.log("Appointment Submitted:", {name, phone, date});
+    document.getElementById('name').value = "";
+    document.getElementById('phone').value = "";
+    document.getElementById('date').value = "";
+  } else {
+    message.textContent = "⚠️ Please fill all fields.";
+  }
+}                                   
+</script>
+</script>
+
+</body>
+</html>
